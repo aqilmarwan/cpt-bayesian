@@ -28,11 +28,11 @@ Ensure your project has the following structure:
 project-folder/
 ├── datasets/               # Contains input datasets (CSV files)
 ├── search_results/         # Original random search results
-├── bo_search_results/      # Bayesian optimization search results
-├── bo_visualization_results/ # Visualizations of Bayesian optimization results
+├── bo_search_results/      # Bayesian optimisation search results
+├── bo_visualization_results/ # Visualizations of Bayesian optimisation results
 ├── comparison_results/     # Comparison between methods
 ├── main.py                 # Original random search implementation
-├── bayesian_optimization.py # Our improved Bayesian method
+├── bayesian_optimisation.py # Our improved Bayesian method
 ├── compare_methods.py      # Framework for comparing methods
 ├── requirements.txt        # Python dependencies
 └── README.md               # This file
@@ -40,15 +40,15 @@ project-folder/
 
 ## Running the Code
 
-### 1. Run the Bayesian Optimization Method
+### 1. Run the Bayesian Optimisation Method
 
 ```bash
-python bayesian_optimization.py
+python bayesian_optimisation.py
 ```
 
 This will:
 - Process all datasets in the `datasets` folder
-- Apply Bayesian optimization to find optimal configurations
+- Apply Bayesian optimisation to find optimal configurations
 - Save results to `bo_search_results` folder
 - Generate visualizations in `bo_visualization_results` folder
 
@@ -82,12 +82,12 @@ You can adjust the following parameters in the code or via command-line argument
 
 - For minimization problems: Lower values are better
 - For maximization problems: Higher values are better
-- The improvement percentage shows how much Bayesian optimization outperforms random search
+- The improvement percentage shows how much Bayesian optimisation outperforms random search
 - The running best performance curve shows the convergence behavior
 
 ## Customizing the Method
 
-You can customize the Bayesian optimization approach by adjusting:
+You can customize the Bayesian optimisation approach by adjusting:
 
 1. The exploration-exploitation balance (modify the % of neighborhood vs random sampling)
 2. The GP model parameters in `GaussianProcessRegressor`
