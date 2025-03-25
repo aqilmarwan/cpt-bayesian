@@ -6,7 +6,7 @@ This project provides an improved method for configuration performance tuning th
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/config-tuning.git
+   git clone https://github.com/aqilmarwan/cpt-bayesian.git
    cd config-tuning
    ```
 
