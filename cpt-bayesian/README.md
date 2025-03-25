@@ -92,6 +92,18 @@ You can customize the Bayesian optimization approach by adjusting:
 2. The GP model parameters in `GaussianProcessRegressor`
 3. The acquisition function (currently using Thompson Sampling)
 
+===== Comparison Summary =====
+Dataset         Improvement     Random Best     Bayesian Best  
+------------------------------------------------------------
+storm              nan%           0.00           0.00
+brotli            0.00%           1.46           1.46
+spear           100.00%           0.00           0.00
+PostgreSQL        0.00%       45922.80       45922.80
+7z                3.14%        4409.80        4271.20
+x264              0.65%          21.70          21.56
+LLVM              2.05%       53380.60       52285.40
+Apache            0.24%          30.82          30.74
+
 ## Troubleshooting
 
 If you encounter issues:
