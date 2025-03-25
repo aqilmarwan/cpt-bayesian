@@ -24,7 +24,7 @@ This project provides an improved method for configuration performance tuning th
 
 Ensure your project has the following structure:
 ```
-project-folder/
+cpt-bayesian/
 ├── datasets/               # Contains input datasets (CSV files)
 ├── search_results/         # Original random search results
 ├── bo_search_results/      # Bayesian optimization search results
