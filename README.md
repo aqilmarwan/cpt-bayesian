@@ -94,45 +94,16 @@ You can customize the Bayesian optimization approach by adjusting:
 
 ## Search Results
 
-## System: LLVM.csv
-- **Best Solution:** [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-- **Best Performance:** 52285.4
-- **Search Time:** 50.60 seconds
-
-## System: PostgreSQL.csv
-- **Best Solution:** [0, 1, 0, 0, 0, 128, 2, 256]
-- **Best Performance:** 46022.8
-- **Search Time:** 38.91 seconds
-
-## System: x264.csv
-- **Best Solution:** [4, 1, 1, 1, 1, 0, 0, 0, 1, 0]
-- **Best Performance:** 21.556
-- **Search Time:** 40.81 seconds
-
-## System: brotli.csv
-- **Best Solution:** [14, 1]
-- **Best Performance:** 1.46
-- **Search Time:** 27.36 seconds
-
-## System: storm.csv
-- **Best Solution:** [2, 1, 4, 1000000, 1, 0, 1000, 10, 512, 100, 2, 29]
-- **Best Performance:** 2.72352293138e-05
-- **Search Time:** 47.98 seconds
-
-## System: spear.csv
-- **Best Solution:** [0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1]
-- **Best Performance:** 0.0
-- **Search Time:** 47.62 seconds
-
-## System: Apache.csv
-- **Best Solution:** [0, 1, 2, 1, 0, 0, 512, 0]
-- **Best Performance:** 30.7448
-- **Search Time:** 41.94 seconds
-
-## System: 7z.csv
-- **Best Solution:** [2, 1, 1, 0, 0, 80, 512, 4]
-- **Best Performance:** 4305.8
-- **Search Time:** 34.76 seconds
+| System          | Best Solution                           | Best Performance | Search Time (s) |
+|---------------|---------------------------------|-----------------|----------------|
+| LLVM.csv      | [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] | 52285.4        | 50.60          |
+| PostgreSQL.csv| [0, 1, 0, 0, 0, 128, 2, 256]   | 46022.8        | 38.91          |
+| x264.csv      | [4, 1, 1, 1, 1, 0, 0, 0, 1, 0] | 21.556         | 40.81          |
+| brotli.csv    | [14, 1]                         | 1.46           | 27.36          |
+| storm.csv     | [2, 1, 4, 1000000, 1, 0, 1000, 10, 512, 100, 2, 29] | 2.7235e-05    | 47.98          |
+| spear.csv     | [0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1] | 0.0            | 47.62          |
+| Apache.csv    | [0, 1, 2, 1, 0, 0, 512, 0]     | 30.7448        | 41.94          |
+| 7z.csv        | [2, 1, 1, 0, 0, 80, 512, 4]    | 4305.8         | 34.76          |
 
 ## Comparison Summary
 
