@@ -7,7 +7,6 @@ This project provides an improved method for configuration performance tuning th
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/aqilmarwan/cpt-bayesian.git
-   cd config-tuning
    ```
 
 2. **Install dependencies**:
@@ -25,7 +24,7 @@ This project provides an improved method for configuration performance tuning th
 
 Ensure your project has the following structure:
 ```
-project-folder/
+cpt-bayesian/
 ├── datasets/               # Contains input datasets (CSV files)
 ├── search_results/         # Original random search results
 ├── bo_search_results/      # Bayesian optimization search results
@@ -92,6 +91,19 @@ You can customize the Bayesian optimization approach by adjusting:
 1. The exploration-exploitation balance (modify the % of neighborhood vs random sampling)
 2. The GP model parameters in `GaussianProcessRegressor`
 3. The acquisition function (currently using Thompson Sampling)
+
+## Comparison Summary
+
+| Dataset     | Improvement | Random Best | Bayesian Best |
+|------------|------------|-------------|--------------|
+| storm      | nan%       | 0.00        | 0.00         |
+| brotli     | 0.00%      | 1.46        | 1.46         |
+| spear      | 100.00%    | 0.00        | 0.00         |
+| PostgreSQL | 0.00%      | 45922.80    | 45922.80     |
+| 7z         | 3.14%      | 4409.80     | 4271.20      |
+| x264       | 0.65%      | 21.70       | 21.56        |
+| LLVM       | 2.05%      | 53380.60    | 52285.40     |
+| Apache     | 0.24%      | 30.82       | 30.74        |
 
 ## Troubleshooting
 
