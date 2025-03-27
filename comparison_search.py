@@ -117,13 +117,5 @@ plt.grid(True, axis='y', alpha=0.3)
 avg_auc_reduction = np.mean(improvements)
 avg_iter_reduction = np.mean(iteration_reduction)
 
-# Add annotation with average improvements
-plt.figtext(0.5, 0.01, 
-            f'Average search efficiency improvement: {avg_auc_reduction:.1f}% | Average convergence speed improvement: {avg_iter_reduction:.1f}%', 
-            ha='center', fontsize=12, 
-            bbox=dict(boxstyle='round', facecolor='lightblue', alpha=0.5))
-
-plt.tight_layout(rect=[0, 0.03, 1, 0.97])  # Adjust layout to accommodate the annotation
-
 plt.savefig('search_efficiency_analysis.png', dpi=300)
 plt.show()
