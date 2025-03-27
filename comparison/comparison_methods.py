@@ -5,12 +5,16 @@ import matplotlib.pyplot as plt
 import time
 from concurrent.futures import ProcessPoolExecutor
 import argparse
+import sys
+
+# Add the parent directory to the path so we can import from there
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Import baseline random search
 from main_lab3 import random_search
 
 # Import our improved Bayesian method
-from main import bayesian_optimization_search
+from bayesian_optimization import bayesian_optimization_search
 
 def compare_methods(file_path, budget, output_dir, repetitions=5):
     """
