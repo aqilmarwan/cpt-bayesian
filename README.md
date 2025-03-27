@@ -124,14 +124,15 @@ You can customize the Bayesian optimization approach by adjusting:
 ===== Comparison Summary =====
 Dataset         Improvement     Random Best     Bayesian Best  
 ------------------------------------------------------------
-LLVM              8.17%       56936.20       52285.40
-PostgreSQL       -0.04%       45922.80       45939.80
-x264              3.91%          22.43          21.56
-brotli            0.00%           1.46           1.46
 storm             0.00%           0.00           0.00
+brotli            0.00%           1.46           1.46
 spear           100.00%           0.00           0.00
-Apache            1.65%          31.26          30.74
+PostgreSQL       -0.04%       45922.80       45939.80
 7z                2.48%        4323.00        4215.80
+x264              3.91%          22.43          21.56
+LLVM              8.17%       56936.20       52285.40
+Apache            1.65%          31.26          30.74
+
 ## Troubleshooting
 
 If you encounter issues:
