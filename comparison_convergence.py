@@ -104,10 +104,6 @@ plt.ylim(0, 350)
 
 # Add improvement percentage annotation
 improvement_pct = ((best_rs_value - best_bo_value) / best_rs_value) * 100
-plt.annotate(f'Performance Improvement: {improvement_pct:.1f}%', 
-             xy=(0.5, 0.03), xycoords='figure fraction', 
-             bbox=dict(boxstyle="round,pad=0.5", facecolor='lightblue', alpha=0.5),
-             fontsize=12, ha='center')
 
 plt.tight_layout()
 plt.savefig('apache_convergence_comparison.png', dpi=300)
