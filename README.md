@@ -25,16 +25,19 @@ This project provides an improved method for configuration performance tuning th
 Ensure your project has the following structure:
 ```
 cpt-bayesian/
-├── datasets/               # Contains input datasets (CSV files)
-├── search_results/         # Original random search results
 ├── bo_search_results/      # Bayesian optimization search results
 ├── bo_visualization_results/ # Visualizations of Bayesian optimization results
-├── comparison_results/     # Comparison between methods
+├── comparison_results/     # Comparison Analysis
+   ├── comparison_convergence.py
+   ├── comparison_improvement.py
+   ├── comparison_methods.py
+   ├── comparison_search.py
+├── datasets/               # Contains input datasets (CSV files)
+└── README.md               # This file
+├── search_results/         # Original random search results
 ├── main.py                 # Original random search implementation
 ├── bayesian_optimization.py # Our improved Bayesian method
-├── compare_methods.py      # Framework for comparing methods
 ├── requirements.txt        # Python dependencies
-└── README.md               # This file
 ```
 
 ## Running the Code
