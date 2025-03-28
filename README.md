@@ -135,8 +135,9 @@ Apache            1.65%          31.26          30.74
 
 ## Analysis Visualization
 <img src="./analysis/apache_convergence_comparison.png" width="500px"></img>
+> Figure 1: Convergenece Comparison for Apache System
 <img src="./analysis/performance_improvement_comparison.png" width="500px"></img>
-
+> Figure 2: Performance Improvement of Bayesian Optimization bs Random Search
 
 ## Troubleshooting
 
