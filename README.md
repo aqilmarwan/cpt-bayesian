@@ -141,6 +141,7 @@ Apache            1.65%          31.26          30.74
 <img src="./analysis/performance_improvement_comparison.png" width="500px"></img>
 > Figure 2: Performance Improvement of Bayesian Optimization bs Random Search
 <p>
+
 ## Troubleshooting
 
 If you encounter issues:
