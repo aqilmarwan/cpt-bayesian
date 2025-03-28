@@ -35,7 +35,7 @@ cpt-bayesian/
 ├── datasets/               # Contains input datasets (CSV files)
 └── README.md               # This file
 ├── search_results/         # Original random search results
-├── bayesian_optimization.py # Our improved Bayesian method
+├── bayesian_optimization.py # Improved Bayesian method
 ├── main_lab3.py                 # Original random search implementation
 ├── requirements.txt        # Python dependencies
 ```
