@@ -134,10 +134,13 @@ LLVM              8.17%       56936.20       52285.40
 Apache            1.65%          31.26          30.74
 
 ## Analysis Visualization
-<img src="./analysis/apache_convergence_comparison.png" width="500px"></img>
-> Figure 1: Convergenece Comparison for Apache System
+<p align="center>
+<img src="./analysis/apache_convergence_comparison.png" width="500px">
+</img>
+
 <img src="./analysis/performance_improvement_comparison.png" width="500px"></img>
 > Figure 2: Performance Improvement of Bayesian Optimization bs Random Search
+</p>
 
 ## Troubleshooting
 
