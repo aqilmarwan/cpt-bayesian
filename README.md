@@ -133,6 +133,11 @@ x264              3.91%          22.43          21.56
 LLVM              8.17%       56936.20       52285.40
 Apache            1.65%          31.26          30.74
 
+## Analysis Visualization
+<img src="./analysis/apache_convergence_comparison.png" width="500px"></img>
+<img src="./analysis/performance_improvement_comparison.png" width="500px"></img>
+
+
 ## Troubleshooting
 
 If you encounter issues:
