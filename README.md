@@ -27,7 +27,7 @@ Ensure your project has the following structure:
 cpt-bayesian/
 ├── bo_search_results/      # Bayesian optimization search results
 ├── bo_visualization_results/ # Visualizations of Bayesian optimization results
-├── comparison_results/     # Comparison Analysis
+├── comparison/     # Comparison Analysis
    ├── comparison_convergence.py
    ├── comparison_improvement.py
    ├── comparison_methods.py
@@ -35,8 +35,8 @@ cpt-bayesian/
 ├── datasets/               # Contains input datasets (CSV files)
 └── README.md               # This file
 ├── search_results/         # Original random search results
-├── main.py                 # Original random search implementation
 ├── bayesian_optimization.py # Our improved Bayesian method
+├── main_lab3.py                 # Original random search implementation
 ├── requirements.txt        # Python dependencies
 ```
 
@@ -57,7 +57,7 @@ This will:
 ### 2. Compare with Random Search Baseline
 
 ```bash
-python compare_methods.py --budget 100 --repetitions 5
+python comparison_methods.py --budget 100 --repetitions 5
 ```
 
 This will:
@@ -69,7 +69,7 @@ This will:
 
 - Check the generated CSV files in `bo_search_results` for detailed results
 - View the visualizations in `bo_visualization_results` to see performance over iterations
-- Examine `comparison_results/comparison_summary.csv` for a quantitative comparison
+- Examine `comparison/comparison_summary.csv` for a quantitative comparison
 - Look at the bar charts in `comparison_results/` for visual comparison
 
 ## Configuration Parameters
@@ -78,7 +78,6 @@ You can adjust the following parameters in the code or via command-line argument
 
 - `--budget`: Number of configurations to evaluate (default: 100)
 - `--repetitions`: Number of repetitions for statistical significance (default: 5)
-- `--output_dir`: Directory to save comparison results
 
 ## Interpreting the Results
 
@@ -95,56 +94,34 @@ You can customize the Bayesian optimization approach by adjusting:
 2. The GP model parameters in `GaussianProcessRegressor`
 3. The acquisition function (currently using Thompson Sampling)
 
-## Search Results
-
-| System          | Best Solution                           | Best Performance | Search Time (s) |
-|---------------|---------------------------------|-----------------|----------------|
-| LLVM.csv      | [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] | 52285.4        | 50.60          |
-| PostgreSQL.csv| [0, 1, 0, 0, 0, 128, 2, 256]   | 46022.8        | 38.91          |
-| x264.csv      | [4, 1, 1, 1, 1, 0, 0, 0, 1, 0] | 21.556         | 40.81          |
-| brotli.csv    | [14, 1]                         | 1.46           | 27.36          |
-| storm.csv     | [2, 1, 4, 1000000, 1, 0, 1000, 10, 512, 100, 2, 29] | 2.7235e-05    | 47.98          |
-| spear.csv     | [0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1] | 0.0            | 47.62          |
-| Apache.csv    | [0, 1, 2, 1, 0, 0, 512, 0]     | 30.7448        | 41.94          |
-| 7z.csv        | [2, 1, 1, 0, 0, 80, 512, 4]    | 4305.8         | 34.76          |
-
 ## Comparison Summary
 
-| Dataset     | Improvement | Random Best | Bayesian Best |
-|------------|------------|-------------|--------------|
-| storm      | nan%       | 0.00        | 0.00         |
-| brotli     | 0.00%      | 1.46        | 1.46         |
-| spear      | 100.00%    | 0.00        | 0.00         |
-| PostgreSQL | 0.00%      | 45922.80    | 45922.80     |
-| 7z         | 3.14%      | 4409.80     | 4271.20      |
-| x264       | 0.65%      | 21.70       | 21.56        |
-| LLVM       | 2.05%      | 53380.60    | 52285.40     |
-| Apache     | 0.24%      | 30.82       | 30.74        |
+| System      | Random Search (Best) | Bayesian Optimization (Best) | Improvement (%) |
+|------------|----------------------|------------------------------|----------------|
+| 7z         | 4648.4               | 4196.4                       | 9.72%         |
+| Apache     | 31.6628              | 30.7448                      | 2.90%         |
+| Brotli     | 1.472                | 1.46                         | 0.82%         |
+| LLVM       | 58793.4              | 52285.4                      | 11.07%        |
+| PostgreSQL | 45939.8              | 46039.0                      | -0.22%        |
+| Spear      | 0.000993048659384     | 0.000993048659384            | 0.00%         |
+| Storm      | 5.3108697162e-05      | 7.62586420787e-05            | -43.58%       |
+| x264       | 22.854               | 21.556                       | 5.68%         |
 
-===== Comparison Summary =====
-Dataset         Improvement     Random Best     Bayesian Best  
-------------------------------------------------------------
-storm             0.00%           0.00           0.00
-brotli            0.00%           1.46           1.46
-spear           100.00%           0.00           0.00
-PostgreSQL       -0.04%       45922.80       45939.80
-7z                2.48%        4323.00        4215.80
-x264              3.91%          22.43          21.56
-LLVM              8.17%       56936.20       52285.40
-Apache            1.65%          31.26          30.74
+
+
 
 ## Analysis Visualization
 
 <p align="center">
-  <img src="./analysis/apache_convergence_comparison.png" width="500px">
+  <img src="./analysis/performance_improvement_comparison.png" width="500px">
   <br>
-  <strong>Figure 1: Convergence Comparison for Apache System</strong>
+  <strong>Figure 1: Performance Improvement of Bayesian Optimization vs Random Search</strong>
 </p>
 
 <p align="center">
-  <img src="./analysis/performance_improvement_comparison.png" width="500px">
+  <img src="./analysis/apache_convergence_comparison.png" width="500px">
   <br>
-  <strong>Figure 2: Performance Improvement of Bayesian Optimization vs Random Search</strong>
+  <strong>Figure 2: Convergence Comparison for Apache System</strong>
 </p>
 
 ## Troubleshooting
